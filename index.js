@@ -29,7 +29,7 @@ client.on('messageCreate', async (message) => {
 	if (message.content === 'خط') {
 		const filePath = 'files/line.png';
 		try {
-			message.delete()
+			await message.delete()
 			await message.channel.send({ files: [filePath] });
 		} catch (error) {
 			console.error('Error while sending the file:', error);
@@ -41,7 +41,7 @@ client.on('messageCreate', async (message) => {
 	if (message.content === '!rules') {
 	 message.delete()
 	 message.channel.send({ files: [`files/rules.png`] });
-	 message.channel.send({ content: `__<:staff:1254796187823898708> قـوانـيـن خـدمـاتـنـا__
+	 message.channel.send({ content: `__<:staff:1254796187823898708> قـوانـيـن خـادمـنـا__
   <:dot:1254796262503350314> يجب على جميع الاعضاء ان يحترموا بعضهم البعض
   <:dot:1254796262503350314> يمنع التحريض على الكراهية
   <:dot:1254796262503350314> التزم بحقوق النشر كـ الروابط، الاساءة، الاستفزاز
